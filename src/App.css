@@ -1,0 +1,226 @@
+/* ---------------- GLOBAL ---------------- */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ---------------- THEMES ---------------- */
+body[data-theme="dark"] {
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: #e5e7eb;
+}
+
+body[data-theme="light"] {
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  color: #1e293b;
+}
+
+/* ---------------- APP ---------------- */
+.app {
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px;
+}
+
+/* ---------------- TITLE ---------------- */
+h1 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa, #fb7185);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------------- BUTTON ---------------- */
+button {
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: #020617;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* ---------------- CARDS ---------------- */
+.card {
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+body[data-theme="dark"] .card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+}
+
+body[data-theme="light"] .card {
+  background: white;
+}
+
+/* ---------------- FORMS ---------------- */
+.form-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+}
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] select {
+  background: rgba(255,255,255,0.12);
+  color: white;
+  border-color: rgba(255,255,255,0.2);
+}
+
+/* ---------------- LIST ---------------- */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+body[data-theme="dark"] li {
+  background: rgba(255,255,255,0.06);
+}
+
+body[data-theme="light"] li {
+  background: #f1f5f9;
+}
+
+/* ---------------- LAYOUT SECTIONS ---------------- */
+.top-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.middle-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.analytics-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .top-section,
+  .middle-section,
+  .analytics-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------------- SUMMARY ---------------- */
+/* SUMMARY CARD */
+body[data-theme="dark"] .summary-card {
+  background: rgba(255,255,255,0.08);
+  color: #f8fafc;
+}
+
+body[data-theme="light"] .summary-card {
+  background: #f1f5f9;
+  color: #020617;
+}
+
+
+/* ---------------- CHARTS ---------------- */
+.chart-card {
+  height: 320px;
+}
+
+.chart-card canvas {
+  max-height: 220px !important;
+}
+
+/* -------------COMPARISON CARD------------ */
+.comparison-card {
+  max-width: 900px;
+  margin: 30px auto 10px;
+  padding: 20px 25px;
+}
+
+.comparison-card h3 {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+/* BOX LAYOUT */
+.comparison-boxes {
+  display: flex;
+  justify-content: space-between;
+  gap:35px;
+  flex-wrap: wrap;
+}
+
+/* STAT BOX */
+.stat-box {
+  flex: 1;
+  background: rgba(0,0,0,0.09);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  min-width: 200px;
+}
+
+.stat-box span {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.stat-box strong {
+  display: block;
+  font-size: 22px;
+  margin-top: 6px;
+}
+
+/* CHANGE BOX */
+.stat-box.highlight {
+  background: rgba(46, 204, 113, 0.12);
+}
+
+.stat-box.highlight.down {
+  background: rgba(231, 76, 60, 0.12);
+}
+
+.stat-box small {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* DARK MODE SUPPORT */
+.dark .stat-box {
+  background: rgba(255,255,255,0.06);
+}
+
+
+
+
