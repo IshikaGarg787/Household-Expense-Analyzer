@@ -79,7 +79,7 @@ Expense-Tracker/
 ⚙️ Installation & Setup--
 
 1. Clone the repository -
-git clone https://github.com/your-username/expense-tracker.git
+git clone https://github.com/IshikaGarg787/Household-Expense-Analyzer.git
 
 2. Navigate to project directory -
 cd expense-tracker
